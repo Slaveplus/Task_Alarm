@@ -52,7 +52,7 @@ public class Login extends AppCompatActivity {
                             String result = putdata.getResult();
                             if (result.equals(""))
                             {
-                                Toast.makeText(getApplicationContext(), "로그인에 실패했습니다", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "로그인에 실패했습니다...", Toast.LENGTH_SHORT).show();
                             }
                             else
                             {
