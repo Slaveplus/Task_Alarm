@@ -1,5 +1,7 @@
 package kr.ac.jbnu.se.taskalarm;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.task_alarm.Login;
 import com.example.task_alarm.R;
 import com.example.task_alarm.databinding.ActivityMainBinding;
 
@@ -51,6 +54,21 @@ public class MainActivity extends AppCompatActivity {// AppCompatActivity를 상
         };
         ImageButton drawbtn= (ImageButton) findViewById(R.id.imageButton);
         drawbtn.setOnClickListener(listener);
+
+        //로그아웃 버튼 할당
+        Button logout = (Button) findViewById(R.id.logout);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this, Login.class);
+                startActivity(intent);
+            }
+        });
+
+        //드로어에 있는 학번 칸에 할당
+        String num=((Login)Login.context_main).name;
+        Button num_btn=(Button) findViewById(R.id.num);
+        num_btn.setText(num);
     }
     DrawerLayout.DrawerListener listener=new DrawerLayout.DrawerListener() {
         @Override

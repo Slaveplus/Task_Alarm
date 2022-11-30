@@ -2,6 +2,7 @@ package com.example.task_alarm;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -16,11 +17,13 @@ import kr.ac.jbnu.se.taskalarm.MainActivity;
 public class Login extends AppCompatActivity {
     EditText Id,pwd;
     Button log;
-    
+    public static Context context_main;
+    public String name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        context_main=this;
         Id=findViewById(R.id.Id);
         pwd=findViewById(R.id.password);
         log=findViewById(R.id.login);
@@ -28,7 +31,7 @@ public class Login extends AppCompatActivity {
         log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String name = Id.getText().toString();
+                name = Id.getText().toString();
                 String passwd = pwd.getText().toString();
                 if(name.equals("")||passwd.equals(""))
                 {
