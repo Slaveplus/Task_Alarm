@@ -29,16 +29,14 @@ public class Login extends AppCompatActivity {
         log=findViewById(R.id.login);
         
         log.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                name = Id.getText().toString();
-                String passwd = pwd.getText().toString();
-                if(name.equals("")||passwd.equals(""))
-                {
-                    Toast.makeText(getApplicationContext(), "학번과 비밀번호를 입력해주세요", Toast.LENGTH_SHORT).show();
-                }
-                else
-                {
+           @Override
+           public void onClick(View view) {
+               name = Id.getText().toString();
+               String passwd = pwd.getText().toString();
+               if (name.equals("") || passwd.equals("")) {
+                   Toast.makeText(getApplicationContext(), "학번과 비밀번호를 입력해주세요", Toast.LENGTH_SHORT).show();
+               }
+               else {
                     String[] field1 = new String[2];
                     String[] data1 = new String[2];
                     field1[0] = "name";
@@ -59,6 +57,7 @@ public class Login extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(), "로그인에 성공했습니다!", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(Login.this, MainActivity.class);
                                 startActivity(intent);
+                                finish();
                             }
                         }
                     }

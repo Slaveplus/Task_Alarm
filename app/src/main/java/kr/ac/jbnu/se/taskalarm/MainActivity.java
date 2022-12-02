@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.task_alarm.Calendar;
 import com.example.task_alarm.Login;
 import com.example.task_alarm.R;
 import com.example.task_alarm.databinding.ActivityMainBinding;
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {// AppCompatActivity를 상
                 drawerLayout.openDrawer(drawerView);
             }
         };
+
         ImageButton drawbtn= (ImageButton) findViewById(R.id.imageButton);
         drawbtn.setOnClickListener(listener);
 
@@ -61,6 +63,16 @@ public class MainActivity extends AppCompatActivity {// AppCompatActivity를 상
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(MainActivity.this, Login.class);
+                startActivity(intent);
+            }
+        });
+
+        //달력버튼 할당
+        Button calendar=(Button)findViewById(R.id.button3);
+        calendar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this, Calendar.class);
                 startActivity(intent);
             }
         });
