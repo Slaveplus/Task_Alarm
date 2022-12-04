@@ -61,12 +61,10 @@ public class MainViewModel extends ViewModel { //ViewModel로 부터 상속받�
                         error.printStackTrace();
                         return;
                     }
-
                     ArrayList<Task> tasks = new ArrayList<>();
                     for (DocumentSnapshot document : value.getDocuments()) {
                         tasks.add(document.toObject(Task.class));
                     }
-
                     _tasks.setValue(tasks); //_tasks에 tasks로 값 설정
                 });
 

@@ -44,7 +44,7 @@
         android:background="#59F8F8FF"
         android:ems="10"
         android:fontFamily="@font/swagger"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:hint="비밀번호:"
         android:textSize="25dp" />
 
