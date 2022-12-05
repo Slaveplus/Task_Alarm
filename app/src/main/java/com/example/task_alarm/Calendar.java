@@ -31,6 +31,7 @@ public class Calendar extends AppCompatActivity {
                         if(task.isSuccessful()){
                             for(QueryDocumentSnapshot document:task.getResult()){
                                 Log.d(TAG,document.getId()+"=>");
+
                             }
                         }
                     }

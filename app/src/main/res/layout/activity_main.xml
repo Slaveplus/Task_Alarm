@@ -31,7 +31,7 @@
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="540dp"
-            android:layout_above="@+id/floatingActionButton"
+            android:layout_above="@+id/imageButton2"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="2dp"
@@ -48,22 +48,6 @@
             tools:ignore="MissingConstraints"
             tools:listitem="@layout/item_subject" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:backgroundTint="#7FA6C9"
-            android:clickable="true"
-            app:borderWidth="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@android:drawable/ic_input_add"
-            tools:ignore="MissingConstraints" />
-
         <ImageButton
             android:id="@+id/imageButton"
             android:layout_width="40dp"
@@ -78,6 +62,18 @@
             app:srcCompat="@drawable/ic_baseline_menu_24"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteY="30dp" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/circle"
+            app:tint="@color/white"
+            app:srcCompat="@android:drawable/ic_input_add" />
 
     </RelativeLayout>
 
