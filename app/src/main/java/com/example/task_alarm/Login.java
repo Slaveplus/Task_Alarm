@@ -54,7 +54,7 @@ public class Login extends AppCompatActivity {
                             }
                             else
                             {
-                                Toast.makeText(getApplicationContext(), "로그인에 성공했습니다!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(Login.this, MainActivity.class);
                                 startActivity(intent);
                                 finish();
