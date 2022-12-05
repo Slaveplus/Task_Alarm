@@ -46,14 +46,13 @@
 
     <Button
         android:id="@+id/name_picker"
-        android:layout_width="30dp"
-        android:layout_height="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="15dp"
         android:background="#00ff0000"
         android:gravity="center"
         android:text=">"
-        android:textAlignment="center"
         android:textColor="#8B8F9C"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/과제명라인"
