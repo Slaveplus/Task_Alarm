@@ -24,7 +24,7 @@ public class manualADD extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manual_add);
 
-        dateText=findViewById(R.id.date);
+        dateText=findViewById(R.id.deadline);
         Calendar c = Calendar.getInstance();
         SimpleDateFormat format1;
         format1 = new SimpleDateFormat("yyyy.MM.dd");

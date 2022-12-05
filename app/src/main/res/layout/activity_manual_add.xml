@@ -7,7 +7,7 @@
     tools:context=".manualADD">
 
     <TextView
-        android:id="@+id/과제등록"
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -15,20 +15,22 @@
         android:text="과제 등록"
         android:textColor='#42424A'
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/과제명"
+        android:fontFamily="@font/swagger3"
+        app:layout_constraintBottom_toTopOf="@+id/task_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/과제명"
+        android:id="@+id/task_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="15dp"
         android:text="과제명"
+        android:fontFamily="@font/swagger3"
         android:textColor='#8B8F9C'
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/과제명라인"
+        app:layout_constraintBottom_toTopOf="@+id/task_line1"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -41,28 +43,28 @@
         android:textColor='#8B8F9C'
         android:textSize="20sp"
         android:gravity="right"
-        app:layout_constraintBottom_toBottomOf="@+id/과제명라인"
+        app:layout_constraintBottom_toBottomOf="@+id/task_line1"
         app:layout_constraintStart_toEndOf="parent"/>
 
     <Button
         android:id="@+id/name_picker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:layout_height="57dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="0dp"
         android:background="#00ff0000"
         android:gravity="center"
         android:text=">"
         android:textColor="#8B8F9C"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/과제명라인"
+        app:layout_constraintBottom_toBottomOf="@+id/task_line1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/제출기한"
+        app:layout_constraintStart_toEndOf="@+id/deadline"
         tools:ignore="TouchTargetSizeCheck" />
 
     <View
-        android:id="@+id/과제명라인"
+        android:id="@+id/task_line1"
         android:layout_width="0dp"
         android:layout_height="2px"
         android:layout_gravity="center"
@@ -70,20 +72,21 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="20dp"
         android:background="#8B8F9C"
-        app:layout_constraintBottom_toTopOf="@+id/제출기한"
+        app:layout_constraintBottom_toTopOf="@+id/deadline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/제출기한"
+        android:id="@+id/deadline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="15dp"
         android:text="제출기한"
+        android:fontFamily="@font/swagger3"
         android:textColor="#8B8F9C"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/제출기한라인"
+        app:layout_constraintBottom_toBottomOf="@+id/task_line2"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -96,29 +99,29 @@
         android:textColor='#8B8F9C'
         android:textSize="20sp"
         android:gravity="right"
-        app:layout_constraintBottom_toBottomOf="@+id/제출기한라인"
-        app:layout_constraintStart_toEndOf="@+id/제출기한"/>
+        app:layout_constraintBottom_toBottomOf="@+id/task_line2"
+        app:layout_constraintStart_toEndOf="@+id/task_line2"/>
 
     <Button
         android:id="@+id/date_picker"
-        android:layout_width="30dp"
-        android:layout_height="35dp"
+        android:layout_width="70dp"
+        android:layout_height="57dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="0dp"
         android:background="#00ff0000"
         android:gravity="center"
         android:text=">"
         android:textAlignment="center"
         android:textColor="#8B8F9C"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/제출기한라인"
+        app:layout_constraintBottom_toBottomOf="@+id/task_line2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/제출기한"
+        app:layout_constraintStart_toEndOf="@+id/task_line2"
         tools:ignore="TouchTargetSizeCheck" />
 
     <View
-        android:id="@+id/제출기한라인"
+        android:id="@+id/task_line2"
         android:layout_width="0dp"
         android:layout_height="2px"
         android:layout_gravity="center"
@@ -126,12 +129,12 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="20dp"
         android:background="#8B8F9C"
-        app:layout_constraintBottom_toTopOf="@+id/메모"
+        app:layout_constraintBottom_toTopOf="@+id/memo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/메모"
+        android:id="@+id/memo"
         android:layout_width="0dp"
         android:layout_height="250dp"
         android:layout_gravity="center"
@@ -142,13 +145,13 @@
         android:backgroundTint="#E5E5E5"
         android:gravity="top"
         android:maxLength="300"
-        app:layout_constraintBottom_toTopOf="@+id/완료"
+        app:layout_constraintBottom_toTopOf="@+id/complete"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/완료"
+        android:id="@+id/complete"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_gravity="center"
@@ -158,6 +161,7 @@
         android:background="@drawable/round_99"
         android:backgroundTint="#7FA6C9"
         android:text="완료"
+        android:fontFamily="@font/swagger3"
         android:textColor='#F8F8FF'
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"

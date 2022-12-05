@@ -76,6 +76,15 @@ public class MainActivity extends AppCompatActivity {// AppCompatActivity를 상
             }
         });
 
+        ImageButton ADD=(ImageButton)findViewById(R.id.ADD);
+        ADD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,com.example.task_alarm.manualADD.class);
+                startActivity(intent);
+            }
+        });
+
         //드로어에 있는 학번 칸에 할당
         String num=((Login)Login.context_main).name;
         Button num_btn=(Button) findViewById(R.id.num);
